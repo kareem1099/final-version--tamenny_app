@@ -15,11 +15,11 @@ class SplashView extends StatefulWidget {
 
 class _SplashViewState extends State<SplashView> {
   @override
-  void initState()  {
+  void initState() {
     Future.delayed(
       Duration(milliseconds: 5000),
       () {
-        Navigator.pushNamed(context, Routes.onboardingView);
+        Navigator.pushNamed(context, Routes.welcomeView);
       },
     );
     super.initState();
@@ -32,7 +32,12 @@ class _SplashViewState extends State<SplashView> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(width: 50, child: SvgPicture.asset(Assets.imagesLogo)),
+            SizedBox(
+              width: 50,
+              child: SvgPicture.asset(
+                Assets.imagesLogo,
+              ),
+            ),
             SizedBox(
               width: 16,
             ),

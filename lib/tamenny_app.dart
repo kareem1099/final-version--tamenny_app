@@ -8,10 +8,10 @@ class TamennyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       onGenerateRoute: appRouter.generateRoute,
-      initialRoute: Routes.splahView,
-      debugShowCheckedModeBanner:  false,
+      initialRoute: Routes.splashView,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
