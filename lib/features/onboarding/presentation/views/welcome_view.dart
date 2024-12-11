@@ -5,7 +5,7 @@ import 'package:tamenny_app/core/theme/app_colors.dart';
 import 'package:tamenny_app/core/theme/app_styles.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
 
-import 'widgets/already_have_an_account.dart';
+import '../../../../core/widgets/already_have_an_account.dart';
 import 'widgets/get_started_custom_button.dart';
 import 'widgets/header_logo_welcome_view.dart';
 
