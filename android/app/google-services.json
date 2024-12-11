@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580619104529",
+    "project_id": "tamenny-app",
+    "storage_bucket": "tamenny-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580619104529:android:bbc05034c71032f2155cb0",
+        "android_client_info": {
+          "package_name": "com.example.tamenny_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEt_G0vs5kEclxwsIXpid5erqkqkMgth0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/app_colors.dart';
-import '../../../../../core/theme/app_styles.dart';
+import '../routes/routes.dart';
+import '../theme/app_colors.dart';
+import '../theme/app_styles.dart';
 
 class AlreadyHaveAnAccount extends StatelessWidget {
-  const AlreadyHaveAnAccount({super.key});
+  const AlreadyHaveAnAccount({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +21,15 @@ class AlreadyHaveAnAccount extends StatelessWidget {
         const SizedBox(
           width: 5,
         ),
-        Text(
-          'Sign Up',
-          style: AppStyles.font11Regular.copyWith(
-            color: AppColors.primaryColor,
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, Routes.signupView);
+          },
+          child: Text(
+            'Sign Up',
+            style: AppStyles.font11Regular.copyWith(
+              color: AppColors.primaryColor,
+            ),
           ),
         ),
       ],

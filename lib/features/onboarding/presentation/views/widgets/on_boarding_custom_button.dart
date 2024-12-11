@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/databases/cache_helper.dart';
+import '../../../../../core/di/service_locator.dart';
 import '../../../../../core/routes/routes.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/utils/app_assets.dart';
@@ -16,6 +18,8 @@ class CustomOnboardingButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (currentPage == 2) {
+            getIt<CacheHelper>()
+              .saveData(key: 'isOnboardingVisited', value: true);
           Navigator.pushNamed(context, Routes.signupView);
         } else {
           controller.nextPage(
