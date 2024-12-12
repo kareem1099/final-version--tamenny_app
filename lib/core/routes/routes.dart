@@ -6,4 +6,7 @@ abstract class Routes {
   static const String loginView = 'loginView';
   static const String forgotPasswordView = 'forgotPasswordView';
   static const String homeView = 'homeView';
+  static const String bottomNavBarView = 'bottomNavBarView';
+  static const String healthScanCategoriesView = 'healthScanCategoriesView';
+  static const String notificationView = 'notificationView';
 }

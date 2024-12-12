@@ -1,29 +1,20 @@
-import 'dart:developer';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tamenny_app/core/routes/app_router.dart';
 import 'package:tamenny_app/tamenny_app.dart';
-
 import 'core/databases/cache_helper.dart';
 import 'core/di/service_locator.dart';
+import 'core/functions/change_system_ui_overlay_style.dart';
+import 'core/functions/check_auth_state_changes.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  changeSystemUiOverlayStyle();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  FirebaseAuth.instance.authStateChanges().listen(
-    (User? user) {
-      if (user == null) {
-        log('User is currently signed out!');
-      } else {
-        log('User is signed in!');
-      }
-    },
-  );
+  checkAuthStateChanges();
   setupServiceLocator();
   await getIt<CacheHelper>().init();
   runApp(
@@ -32,3 +23,7 @@ void main() async {
     ),
   );
 }
+
+
+
+
