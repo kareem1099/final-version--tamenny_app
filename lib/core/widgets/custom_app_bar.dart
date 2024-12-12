@@ -4,7 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../theme/app_styles.dart';
 import '../utils/app_assets.dart';
 
-AppBar customAppBar(BuildContext context,{required String title , List<Widget>? actions}) {
+AppBar customAppBar(BuildContext context,
+    {required String title, List<Widget>? actions, bool leadingIcon = true}) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0.0,
@@ -14,11 +15,13 @@ AppBar customAppBar(BuildContext context,{required String title , List<Widget>? 
         onTap: () {
           Navigator.pop(context);
         },
-        child: SvgPicture.asset(
-          Assets.imagesPopIcon,
-          width: 30,
-          height: 30,
-        ),
+        child: leadingIcon
+            ? SvgPicture.asset(
+                Assets.imagesPopIcon,
+                width: 30,
+                height: 30,
+              )
+            : null,
       ),
     ),
     title: Text(
