@@ -30,6 +30,10 @@ class Assets {
   /// assets/images/cardiologist_icon.svg
   static const String imagesCardiologistIcon = "assets/images/cardiologist_icon.svg";
 
+  /// Assets for imagesCloseIcon
+  /// assets/images/close_icon.svg
+  static const String imagesCloseIcon = "assets/images/close_icon.svg";
+
   /// Assets for imagesCommunityActiveIcon
   /// assets/images/community_active_icon.svg
   static const String imagesCommunityActiveIcon = "assets/images/community_active_icon.svg";
@@ -122,6 +126,10 @@ class Assets {
   /// assets/images/profiel.png
   static const String imagesProfiel = "assets/images/profiel.png";
 
+  /// Assets for imagesSearchGrayIcon
+  /// assets/images/search_gray_Icon.svg
+  static const String imagesSearchGrayIcon = "assets/images/search_gray_Icon.svg";
+
   /// Assets for imagesSearchIcon
   /// assets/images/search-icon.svg
   static const String imagesSearchIcon = "assets/images/search-icon.svg";
@@ -133,5 +141,9 @@ class Assets {
   /// Assets for imagesSplashScreenIosAndriodBelow12
   /// assets/images/splash_screen_ios_andriod_below_12.png
   static const String imagesSplashScreenIosAndriodBelow12 = "assets/images/splash_screen_ios_andriod_below_12.png";
+
+  /// Assets for imagesTimeIcon
+  /// assets/images/time_icon.svg
+  static const String imagesTimeIcon = "assets/images/time_icon.svg";
 }
 
