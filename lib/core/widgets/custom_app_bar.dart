@@ -8,6 +8,7 @@ AppBar customAppBar(BuildContext context,
     {required String title, List<Widget>? actions, bool leadingIcon = true}) {
   return AppBar(
     backgroundColor: Colors.white,
+    surfaceTintColor: Colors.transparent,
     elevation: 0.0,
     centerTitle: true,
     leading: Center(
