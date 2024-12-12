@@ -34,6 +34,10 @@ class Assets {
   /// assets/images/close_icon.svg
   static const String imagesCloseIcon = "assets/images/close_icon.svg";
 
+  /// Assets for imagesCommentsIcon
+  /// assets/images/comments_icon.svg
+  static const String imagesCommentsIcon = "assets/images/comments_icon.svg";
+
   /// Assets for imagesCommunityActiveIcon
   /// assets/images/community_active_icon.svg
   static const String imagesCommunityActiveIcon = "assets/images/community_active_icon.svg";
@@ -82,6 +86,14 @@ class Assets {
   /// assets/images/logo_white.svg
   static const String imagesLogoWhite = "assets/images/logo_white.svg";
 
+  /// Assets for imagesLoveActiveIcon
+  /// assets/images/love_active_icon.svg
+  static const String imagesLoveActiveIcon = "assets/images/love_active_icon.svg";
+
+  /// Assets for imagesLoveInactiveIcon
+  /// assets/images/love_inactive_icon.svg
+  static const String imagesLoveInactiveIcon = "assets/images/love_inactive_icon.svg";
+
   /// Assets for imagesMainBannerBackground
   /// assets/images/main_banner_background.png
   static const String imagesMainBannerBackground = "assets/images/main_banner_background.png";
@@ -89,6 +101,10 @@ class Assets {
   /// Assets for imagesMainBannerBg
   /// assets/images/main_banner_bg.svg
   static const String imagesMainBannerBg = "assets/images/main_banner_bg.svg";
+
+  /// Assets for imagesMoreIcon
+  /// assets/images/more_icon.svg
+  static const String imagesMoreIcon = "assets/images/more_icon.svg";
 
   /// Assets for imagesNeurologicIcon
   /// assets/images/neurologic_icon.png
@@ -122,9 +138,21 @@ class Assets {
   /// assets/images/pop_icon.svg
   static const String imagesPopIcon = "assets/images/pop_icon.svg";
 
+  /// Assets for imagesPostImage
+  /// assets/images/post_image.png
+  static const String imagesPostImage = "assets/images/post_image.png";
+
   /// Assets for imagesProfiel
   /// assets/images/profiel.png
   static const String imagesProfiel = "assets/images/profiel.png";
+
+  /// Assets for imagesProfiel2
+  /// assets/images/profiel2.png
+  static const String imagesProfiel2 = "assets/images/profiel2.png";
+
+  /// Assets for imagesProfiel3
+  /// assets/images/profiel3.png
+  static const String imagesProfiel3 = "assets/images/profiel3.png";
 
   /// Assets for imagesSearchGrayIcon
   /// assets/images/search_gray_Icon.svg
@@ -133,6 +161,10 @@ class Assets {
   /// Assets for imagesSearchIcon
   /// assets/images/search-icon.svg
   static const String imagesSearchIcon = "assets/images/search-icon.svg";
+
+  /// Assets for imagesShareIcon
+  /// assets/images/share_icon.svg
+  static const String imagesShareIcon = "assets/images/share_icon.svg";
 
   /// Assets for imagesSplashImageAndroid12AndAbove
   /// assets/images/splash_image_android_12_and_above.png
