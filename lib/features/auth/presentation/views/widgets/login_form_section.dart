@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tamenny_app/core/routes/routes.dart';
@@ -26,7 +25,7 @@ class LoginFormSection extends StatelessWidget {
       listener: (context, state) {
         if (state is LogInSuccessState) {
           FirebaseAuth.instance.currentUser!.emailVerified
-              ? Navigator.pushNamed(context, Routes.homeView)
+              ? Navigator.pushNamed(context, Routes.bottomNavBarView)
               : ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Please Verify Your Account'),

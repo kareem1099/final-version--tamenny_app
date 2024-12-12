@@ -12,7 +12,9 @@ class TamennyApp extends StatelessWidget {
       onGenerateRoute: appRouter.generateRoute,
       initialRoute: Routes.splashView,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
     );
   }
 }

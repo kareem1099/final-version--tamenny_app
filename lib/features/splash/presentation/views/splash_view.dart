@@ -10,6 +10,9 @@ import 'package:tamenny_app/core/theme/app_colors.dart';
 import 'package:tamenny_app/core/theme/app_styles.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
 
+import 'functions/custom_navigation_from_splash_to_another_views.dart';
+import 'widgets/logo_name_with_animation.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -22,24 +25,10 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     bool? isOnboardingVisited =
         getIt<CacheHelper>().getData(key: 'isOnboardingVisited') ?? false;
-    Future.delayed(
-      Duration(milliseconds: 5000),
-      () {
-        if (isOnboardingVisited == true) {
-          FirebaseAuth.instance.currentUser == null
-              ? Navigator.pushNamed(context, Routes.loginView) : 
-              FirebaseAuth.instance.currentUser!.emailVerified == true ?
-              Navigator.pushNamed(context, Routes.homeView)
-              : Navigator.pushNamed(context, Routes.loginView);
-        } else {
-          getIt<CacheHelper>()
-              .saveData(key: 'isOnboardingVisited', value: true);
-          Navigator.pushNamed(context, Routes.welcomeView);
-        }
-      },
-    );
+    CustomNavigationFromSplashToAnotherViews(context ,isOnboardingVisited);
     super.initState();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -54,29 +43,10 @@ class _SplashViewState extends State<SplashView> {
                 Assets.imagesLogo,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 16,
             ),
-            Visibility(
-              maintainSize: true,
-              maintainAnimation: true,
-              maintainState: true,
-              child: AnimatedTextKit(
-                repeatForever: false,
-                totalRepeatCount: 1,
-                animatedTexts: [
-                  TyperAnimatedText(
-                    'Tamenny',
-                    textStyle: AppStyles.font32Bold.copyWith(
-                      color: AppColors.blueDarkColor,
-                    ),
-                    speed: Duration(
-                      milliseconds: 100,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const LogoNameWithAnimation(),
           ],
         ),
       ),
