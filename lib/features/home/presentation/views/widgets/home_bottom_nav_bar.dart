@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
 import 'package:tamenny_app/features/home/presentation/views/home_view.dart';
+import 'package:tamenny_app/features/profiel/presentation/views/profile_view.dart';
 import 'package:tamenny_app/features/search/presentation/views/search_view.dart';
 import 'package:tamenny_app/features/settings/presentation/views/settings_view.dart';
 import 'package:tamenny_app/scan/presentation/views/scan_view.dart';
@@ -32,7 +33,7 @@ class BottomNavBar extends StatelessWidget {
       const CommunityView(),
       const SearchView(),
       const SettingsView(),
-      const ScanView(),
+      const ProfileView(),
     ];
   }
 

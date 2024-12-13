@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tamenny_app/core/routes/routes.dart';
 import 'package:tamenny_app/core/theme/app_styles.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
 
@@ -27,11 +28,16 @@ class HealthScanCategoriesView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
-              CircleAvatar(
-                radius: 40,
-                backgroundColor: const Color(0xffF4F8FF),
-                child: SvgPicture.asset(
-                  Assets.imagesCardiologistIcon,
+              GestureDetector(
+                onTap:(){
+                  Navigator.pushNamed(context, Routes.scanView);
+                },
+                child: CircleAvatar(
+                  radius: 40,
+                  backgroundColor: const Color(0xffF4F8FF),
+                  child: SvgPicture.asset(
+                    Assets.imagesCardiologistIcon,
+                  ),
                 ),
               ),
               const SizedBox(
