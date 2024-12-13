@@ -12,11 +12,11 @@ import '../../features/auth/presentation/views/signup_view.dart';
 import '../../features/home/presentation/views/health_scan_categories_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
-import '../../scan/presentation/views/completed_screen.dart';
-import '../../scan/presentation/views/processing_screen.dart';
-import '../../scan/presentation/views/scan_analysis_results.dart';
-import '../../scan/presentation/views/scan_view.dart';
-import '../../scan/presentation/views/upload_file_view.dart';
+import '../../features/scan/presentation/views/completed_screen.dart';
+import '../../features/scan/presentation/views/processing_screen.dart';
+import '../../features/scan/presentation/views/scan_analysis_results.dart';
+import '../../features/scan/presentation/views/scan_view.dart';
+import '../../features/scan/presentation/views/upload_file_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {

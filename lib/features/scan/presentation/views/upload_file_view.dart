@@ -4,8 +4,8 @@ import 'package:tamenny_app/core/theme/app_styles.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
 import 'package:tamenny_app/core/widgets/custom_app_bar.dart';
 
-import '../../../core/routes/routes.dart';
-import '../../../core/widgets/custom_app_button.dart';
+import '../../../../core/routes/routes.dart';
+import '../../../../core/widgets/custom_app_button.dart';
 
 class UploadFileView extends StatelessWidget {
   const UploadFileView({super.key});

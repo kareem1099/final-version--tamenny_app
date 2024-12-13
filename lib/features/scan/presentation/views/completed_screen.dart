@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../core/routes/routes.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/app_styles.dart';
-import '../../../core/utils/app_assets.dart';
-import '../../../core/widgets/custom_app_bar.dart';
-import '../../../core/widgets/custom_app_button.dart';
+import '../../../../core/routes/routes.dart';
+import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/app_styles.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
+import '../../../../core/widgets/custom_app_button.dart';
 
 class CompletedScreen extends StatelessWidget {
   const CompletedScreen({super.key});

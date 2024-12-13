@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';
+import 'package:tamenny_app/features/delete/delete_view.dart';
 import 'package:tamenny_app/features/home/presentation/views/home_view.dart';
 import 'package:tamenny_app/features/profiel/presentation/views/profile_view.dart';
 import 'package:tamenny_app/features/search/presentation/views/search_view.dart';
 import 'package:tamenny_app/features/settings/presentation/views/settings_view.dart';
-import 'package:tamenny_app/scan/presentation/views/scan_view.dart';
+import 'package:tamenny_app/features/scan/presentation/views/scan_view.dart';
 import '../../../../community/presentation/views/community_view.dart';
 
 PersistentTabController _controller = PersistentTabController();
@@ -32,7 +33,7 @@ class BottomNavBar extends StatelessWidget {
       const HomeView(),
       const CommunityView(),
       const SearchView(),
-      const SettingsView(),
+      const DeleteView(),
       const ProfileView(),
     ];
   }
@@ -55,8 +56,21 @@ class BottomNavBar extends StatelessWidget {
         inactiveIcon: SvgPicture.asset(Assets.imagesCalendarInactiveIcon),
       ),
       PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(Assets.imagesAppleIcon),
-        inactiveIcon: SvgPicture.asset(Assets.imagesHomeInactiveIcon),
+        icon: Opacity(
+          opacity: 0.6,
+          child: CircleAvatar(
+            radius: 12,
+            child: ClipRRect(
+                borderRadius: BorderRadius.circular(555),
+                child: Image.asset(Assets.imagesProfiel)),
+          ),
+        ),
+        inactiveIcon: CircleAvatar(
+          radius: 12,
+          child: ClipRRect(
+              borderRadius: BorderRadius.circular(555),
+              child: Image.asset(Assets.imagesProfiel)),
+        ),
       ),
     ];
   }
