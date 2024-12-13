@@ -12,6 +12,11 @@ import '../../features/auth/presentation/views/signup_view.dart';
 import '../../features/home/presentation/views/health_scan_categories_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
+import '../../scan/presentation/views/completed_screen.dart';
+import '../../scan/presentation/views/processing_screen.dart';
+import '../../scan/presentation/views/scan_analysis_results.dart';
+import '../../scan/presentation/views/scan_view.dart';
+import '../../scan/presentation/views/upload_file_view.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -27,6 +32,10 @@ class AppRouter {
       case Routes.welcomeView:
         return MaterialPageRoute(
           builder: (context) => const WelcomeView(),
+        );
+      case Routes.scanView:
+        return MaterialPageRoute(
+          builder: (context) => const ScanView(),
         );
       case Routes.loginView:
         return MaterialPageRoute(
@@ -53,6 +62,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const BottomNavBar(),
         );
+      case Routes.processingScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ProcessingScreen(),
+        );
+      case Routes.uploadFileView:
+        return MaterialPageRoute(
+          builder: (context) => const UploadFileView(),
+        );
       case Routes.healthScanCategoriesView:
         return MaterialPageRoute(
           builder: (context) => const HealthScanCategoriesView(),
@@ -60,6 +77,14 @@ class AppRouter {
       case Routes.notificationView:
         return MaterialPageRoute(
           builder: (context) => const NotificationView(),
+        );
+      case Routes.completedScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CompletedScreen(),
+        );
+      case Routes.scanAnalysisResultsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ScanAnalysisResults(),
         );
       default:
         return MaterialPageRoute(

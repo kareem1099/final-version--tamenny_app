@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAiProcessingModel
+  /// assets/images/ai_processing_model.png
+  static const String imagesAiProcessingModel = "assets/images/ai_processing_model.png";
+
   /// Assets for imagesAppleIcon
   /// assets/images/apple_icon.svg
   static const String imagesAppleIcon = "assets/images/apple_icon.svg";
@@ -45,6 +49,18 @@ class Assets {
   /// Assets for imagesCommunityInactiveIcon
   /// assets/images/community_inactive_icon.svg
   static const String imagesCommunityInactiveIcon = "assets/images/community_inactive_icon.svg";
+
+  /// Assets for imagesDoctorCompletedModel
+  /// assets/images/doctor_completed_model.png
+  static const String imagesDoctorCompletedModel = "assets/images/doctor_completed_model.png";
+
+  /// Assets for imagesDoctorUploadFile
+  /// assets/images/doctor_upload_file.png
+  static const String imagesDoctorUploadFile = "assets/images/doctor_upload_file.png";
+
+  /// Assets for imagesDoctorWelcomeModel
+  /// assets/images/doctor_welcome_model.png
+  static const String imagesDoctorWelcomeModel = "assets/images/doctor_welcome_model.png";
 
   /// Assets for imagesFacebookIcon
   /// assets/images/facebook_icon.svg
@@ -153,6 +169,10 @@ class Assets {
   /// Assets for imagesProfiel3
   /// assets/images/profiel3.png
   static const String imagesProfiel3 = "assets/images/profiel3.png";
+
+  /// Assets for imagesScanResult
+  /// assets/images/scan_result.png
+  static const String imagesScanResult = "assets/images/scan_result.png";
 
   /// Assets for imagesSearchGrayIcon
   /// assets/images/search_gray_Icon.svg
