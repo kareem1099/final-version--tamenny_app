@@ -66,6 +66,10 @@ class Assets {
   /// assets/images/facebook_icon.svg
   static const String imagesFacebookIcon = "assets/images/facebook_icon.svg";
 
+  /// Assets for imagesFaqIcon
+  /// assets/images/faq_icon.svg
+  static const String imagesFaqIcon = "assets/images/faq_icon.svg";
+
   /// Assets for imagesFemaleDoctor
   /// assets/images/female_doctor.svg
   static const String imagesFemaleDoctor = "assets/images/female_doctor.svg";
@@ -77,6 +81,10 @@ class Assets {
   /// Assets for imagesGeneralIcon
   /// assets/images/general_icon.svg
   static const String imagesGeneralIcon = "assets/images/general_icon.svg";
+
+  /// Assets for imagesGoArrowRigthIcon
+  /// assets/images/go__arrow_rigth_Icon.svg
+  static const String imagesGoArrowRigthIcon = "assets/images/go__arrow_rigth_Icon.svg";
 
   /// Assets for imagesGoogleIcon
   /// assets/images/google_icon.svg
@@ -90,6 +98,10 @@ class Assets {
   /// assets/images/home_inactive_icon.svg
   static const String imagesHomeInactiveIcon = "assets/images/home_inactive_icon.svg";
 
+  /// Assets for imagesLanguageIcon
+  /// assets/images/language_icon.svg
+  static const String imagesLanguageIcon = "assets/images/language_icon.svg";
+
   /// Assets for imagesLauncherLogo
   /// assets/images/launcher_logo.png
   static const String imagesLauncherLogo = "assets/images/launcher_logo.png";
@@ -101,6 +113,10 @@ class Assets {
   /// Assets for imagesLogoWhite
   /// assets/images/logo_white.svg
   static const String imagesLogoWhite = "assets/images/logo_white.svg";
+
+  /// Assets for imagesLogoutIcon
+  /// assets/images/logout_icon.svg
+  static const String imagesLogoutIcon = "assets/images/logout_icon.svg";
 
   /// Assets for imagesLoveActiveIcon
   /// assets/images/love_active_icon.svg
@@ -134,6 +150,10 @@ class Assets {
   /// assets/images/notification_found_icon.svg
   static const String imagesNotificationFoundIcon = "assets/images/notification_found_icon.svg";
 
+  /// Assets for imagesNotificationIcon
+  /// assets/images/notification_icon.svg
+  static const String imagesNotificationIcon = "assets/images/notification_icon.svg";
+
   /// Assets for imagesOnboarding1
   /// assets/images/onboarding1.png
   static const String imagesOnboarding1 = "assets/images/onboarding1.png";
@@ -149,6 +169,10 @@ class Assets {
   /// Assets for imagesOnboarding4
   /// assets/images/onboarding4.png
   static const String imagesOnboarding4 = "assets/images/onboarding4.png";
+
+  /// Assets for imagesPopArrowWhiteIcon
+  /// assets/images/pop_arrow_white_icon.svg
+  static const String imagesPopArrowWhiteIcon = "assets/images/pop_arrow_white_icon.svg";
 
   /// Assets for imagesPopIcon
   /// assets/images/pop_icon.svg
@@ -181,6 +205,14 @@ class Assets {
   /// Assets for imagesSearchIcon
   /// assets/images/search-icon.svg
   static const String imagesSearchIcon = "assets/images/search-icon.svg";
+
+  /// Assets for imagesSecurityIcon
+  /// assets/images/security_icon.svg
+  static const String imagesSecurityIcon = "assets/images/security_icon.svg";
+
+  /// Assets for imagesSettingIcon
+  /// assets/images/setting_icon.svg
+  static const String imagesSettingIcon = "assets/images/setting_icon.svg";
 
   /// Assets for imagesShareIcon
   /// assets/images/share_icon.svg

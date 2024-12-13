@@ -4,10 +4,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../theme/app_styles.dart';
 import '../utils/app_assets.dart';
 
-AppBar customAppBar(BuildContext context,
-    {required String title, List<Widget>? actions, bool leadingIcon = true}) {
+AppBar customAppBar(
+  BuildContext context, {
+  required String title,
+  List<Widget>? actions,
+  bool leadingIcon = true,
+  Color? backgroundColor,
+  Color? titleColor,
+}) {
   return AppBar(
-    backgroundColor: Colors.white,
+    backgroundColor: backgroundColor ?? Colors.white,
     surfaceTintColor: Colors.transparent,
     elevation: 0.0,
     centerTitle: true,
@@ -27,7 +33,8 @@ AppBar customAppBar(BuildContext context,
     ),
     title: Text(
       title,
-      style: AppStyles.font18SemiBold,
+      style: AppStyles.font18SemiBold
+          .copyWith(color: titleColor ?? Color(0xff242424)),
     ),
     actions: actions,
   );
