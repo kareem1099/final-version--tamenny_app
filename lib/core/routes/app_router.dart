@@ -11,6 +11,11 @@ import '../../features/auth/presentation/views/login_view.dart';
 import '../../features/auth/presentation/views/signup_view.dart';
 import '../../features/home/presentation/views/health_scan_categories_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
+import '../../features/settings/presentation/views/settings_faq_view.dart';
+import '../../features/settings/presentation/views/settings_language_view.dart';
+import '../../features/settings/presentation/views/settings_notification_view.dart';
+import '../../features/settings/presentation/views/settings_security_view.dart';
+import '../../features/settings/presentation/views/settings_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import '../../features/scan/presentation/views/completed_screen.dart';
 import '../../features/scan/presentation/views/processing_screen.dart';
@@ -85,6 +90,26 @@ class AppRouter {
       case Routes.scanAnalysisResultsScreen:
         return MaterialPageRoute(
           builder: (context) => const ScanAnalysisResults(),
+        );
+      case Routes.settingsView:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsView(),
+        );
+      case Routes.settingsSecurityView:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsSecurityView(),
+        );
+      case Routes.settingsNotificationView:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsNotificationView(),
+        );
+      case Routes.settingsLanguageView:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsLanguageView(),
+        );
+      case Routes.settingsFaqView:
+        return MaterialPageRoute(
+          builder: (context) => const SettingsFaqView(),
         );
       default:
         return MaterialPageRoute(
