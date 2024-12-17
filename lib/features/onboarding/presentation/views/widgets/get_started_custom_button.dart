@@ -14,7 +14,7 @@ class GetStartedButton extends StatelessWidget {
     return Center(
       child: GestureDetector(
         onTap: () {
-          Navigator.pushNamed(context, Routes.onboardingView);
+          Navigator.pushReplacementNamed(context, Routes.onboardingView);
         },
         child: Container(
             decoration: BoxDecoration(

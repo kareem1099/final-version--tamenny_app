@@ -12,13 +12,13 @@ Future<Null> CustomNavigationFromSplashToAnotherViews(BuildContext context,
     () {
       if (isOnboardingVisited == true) {
         FirebaseAuth.instance.currentUser == null
-            ? Navigator.pushNamed(context, Routes.loginView)
+            ? Navigator.pushReplacementNamed(context, Routes.loginView)
             : FirebaseAuth.instance.currentUser!.emailVerified == true
-                ? Navigator.pushNamed(context, Routes.bottomNavBarView)
-                : Navigator.pushNamed(context, Routes.loginView);
+                ? Navigator.pushReplacementNamed(context, Routes.bottomNavBarView)
+                : Navigator.pushReplacementNamed(context, Routes.loginView);
       } else {
         getIt<CacheHelper>().saveData(key: 'isOnboardingVisited', value: true);
-        Navigator.pushNamed(context, Routes.welcomeView);
+        Navigator.pushReplacementNamed(context, Routes.welcomeView);
       }
     },
   );

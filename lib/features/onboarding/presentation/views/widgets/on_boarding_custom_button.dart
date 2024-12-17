@@ -20,7 +20,7 @@ class CustomOnboardingButton extends StatelessWidget {
         if (currentPage == 2) {
             getIt<CacheHelper>()
               .saveData(key: 'isOnboardingVisited', value: true);
-          Navigator.pushNamed(context, Routes.signupView);
+          Navigator.pushReplacementNamed(context, Routes.signupView);
         } else {
           controller.nextPage(
               duration: Duration(milliseconds: 300),

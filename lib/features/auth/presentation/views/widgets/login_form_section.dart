@@ -9,7 +9,8 @@ import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
 import '../../../../../core/widgets/already_have_an_account.dart';
 import '../../../../../core/widgets/custom_app_button.dart';
-import '../../../../../core/widgets/custom_text_field.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
+import '../../../../../core/widgets/dont_have_an_account.dart';
 import 'or_sign_in_with.dart';
 import 'remember_me_widget.dart';
 import 'social_media_methods.dart';
@@ -25,7 +26,7 @@ class LoginFormSection extends StatelessWidget {
       listener: (context, state) {
         if (state is LogInSuccessState) {
           FirebaseAuth.instance.currentUser!.emailVerified
-              ? Navigator.pushNamed(context, Routes.bottomNavBarView)
+              ? Navigator.pushReplacementNamed(context, Routes.bottomNavBarView)
               : ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Please Verify Your Account'),
@@ -98,6 +99,17 @@ class LoginFormSection extends StatelessWidget {
                     }
                     return null;
                   },
+                  obscure: authCubit.obsecure,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      authCubit.changeObsecureState();
+                    },
+                    icon: Icon(
+                      authCubit.obsecure == false
+                          ? Icons.remove_red_eye
+                          : Icons.visibility_off,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 16,
@@ -150,7 +162,7 @@ class LoginFormSection extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                AlreadyHaveAnAccount(),
+                DontHaveAnAccount(),
                 const SizedBox(
                   height: 24,
                 ),

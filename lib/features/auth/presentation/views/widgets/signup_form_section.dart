@@ -7,7 +7,7 @@ import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
 import '../../../../../core/widgets/already_have_an_account.dart';
 import '../../../../../core/widgets/custom_app_button.dart';
-import '../../../../../core/widgets/custom_text_field.dart';
+import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../view_model/cubit/auth_cubit.dart';
 import '../../view_model/cubit/auth_state.dart';
 import 'or_sign_in_with.dart';
@@ -28,7 +28,7 @@ class SignupFormSection extends StatelessWidget {
                   Text('Successifuly , check your email to verify account'),
             ),
           );
-          Navigator.pushNamed(context, Routes.loginView);
+          Navigator.pushReplacementNamed(context, Routes.loginView);
         } else if (state is SignUpFailureState) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -126,6 +126,17 @@ class SignupFormSection extends StatelessWidget {
                     }
                     return null;
                   },
+                  obscure: authCubit.obsecure,
+                  suffixIcon: IconButton(
+                    onPressed: () {
+                      authCubit.changeObsecureState();
+                    },
+                    icon: Icon(
+                      authCubit.obsecure == false
+                          ? Icons.remove_red_eye
+                          : Icons.visibility_off,
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   height: 16,

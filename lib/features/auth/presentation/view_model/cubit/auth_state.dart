@@ -21,3 +21,5 @@ final class LogInFailureState extends AuthState {
 
   LogInFailureState({required this.errMessage});
 }
+
+final class ObsecureTextState extends AuthState {}

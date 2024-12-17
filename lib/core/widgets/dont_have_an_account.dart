@@ -4,10 +4,8 @@ import '../routes/routes.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_styles.dart';
 
-class AlreadyHaveAnAccount extends StatelessWidget {
-  const AlreadyHaveAnAccount({
-    super.key,
-  });
+class DontHaveAnAccount extends StatelessWidget {
+  const DontHaveAnAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
-          'Already have an account yet?',
+          'Don’t have an account?',
           style: AppStyles.font11Regular,
         ),
         const SizedBox(
@@ -23,10 +21,10 @@ class AlreadyHaveAnAccount extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushReplacementNamed(context, Routes.loginView);
+            Navigator.pushReplacementNamed(context, Routes.signupView);
           },
           child: Text(
-            'Sign in',
+            'Sign Up.',
             style: AppStyles.font11Regular.copyWith(
               color: AppColors.primaryColor,
             ),
