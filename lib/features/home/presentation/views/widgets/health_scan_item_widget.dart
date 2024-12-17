@@ -1,6 +1,9 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/routes/routes.dart';
 import '../../../../../core/theme/app_styles.dart';
 import '../../../../../core/utils/app_assets.dart';
 
@@ -9,23 +12,29 @@ class HealthScanItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 28,
-          backgroundColor: Color(0xffF4F8FF),
-          child: SvgPicture.asset(
-            Assets.imagesCardiologistIcon,
+    return GestureDetector(
+      onTap: () {
+        log('Navigating to: ${Routes.healthScanCategoriesView}');
+        Navigator.of(context, rootNavigator: true).pushNamed(Routes.scanView);
+      },
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 28,
+            backgroundColor: Color(0xffF4F8FF),
+            child: SvgPicture.asset(
+              Assets.imagesCardiologistIcon,
+            ),
           ),
-        ),
-        SizedBox(
-          height: 12,
-        ),
-        Text(
-          'General',
-          style: AppStyles.font12Regular,
-        ),
-      ],
+          SizedBox(
+            height: 12,
+          ),
+          Text(
+            'General',
+            style: AppStyles.font12Regular,
+          ),
+        ],
+      ),
     );
   }
 }

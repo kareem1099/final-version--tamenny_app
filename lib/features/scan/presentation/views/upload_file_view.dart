@@ -40,7 +40,7 @@ class UploadFileView extends StatelessWidget {
             CustomAppButton(
               text: 'Upload File',
               onTap: () {
-                Navigator.pushNamed(context, Routes.processingScreen);
+                Navigator.pushNamed(context, Routes.previewScanView);
               },
             ),
             SizedBox(

@@ -19,4 +19,5 @@ abstract class Routes {
   static const String settingsSecurityView = 'settingsSecurityView';
   static const String settingsLanguageView = 'settingsLanguageView';
   static const String settingsFaqView = 'settingsFaqView';
+  static const String previewScanView = 'previewScanView';
 }

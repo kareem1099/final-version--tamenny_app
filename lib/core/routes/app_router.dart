@@ -11,6 +11,7 @@ import '../../features/auth/presentation/views/login_view.dart';
 import '../../features/auth/presentation/views/signup_view.dart';
 import '../../features/home/presentation/views/health_scan_categories_view.dart';
 import '../../features/home/presentation/views/notification_view.dart';
+import '../../features/scan/presentation/views/preview_scan_view.dart';
 import '../../features/settings/presentation/views/settings_faq_view.dart';
 import '../../features/settings/presentation/views/settings_language_view.dart';
 import '../../features/settings/presentation/views/settings_notification_view.dart';
@@ -110,6 +111,10 @@ class AppRouter {
       case Routes.settingsFaqView:
         return MaterialPageRoute(
           builder: (context) => const SettingsFaqView(),
+        );
+      case Routes.previewScanView:
+        return MaterialPageRoute(
+          builder: (context) => const PreviewScanView(),
         );
       default:
         return MaterialPageRoute(
