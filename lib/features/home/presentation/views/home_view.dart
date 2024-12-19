@@ -19,27 +19,224 @@ class HomeView extends StatelessWidget {
       child: SafeArea(
         child: Scaffold(
           body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: CustomScrollView(
               slivers: [
-                SliverToBoxAdapter(
+                // Custom AppBar
+                const SliverToBoxAdapter(
                   child: HomeCustomAppBar(),
                 ),
-                SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 27,
-                  ),
-                ),
-                SliverToBoxAdapter(
+                // Main Banner Section
+                const SliverToBoxAdapter(
                   child: MainBannerWidget(),
                 ),
-                SliverToBoxAdapter(
-                  child: SizedBox(
-                    height: 24,
+                // Health Scan Categories Section
+                const SliverToBoxAdapter(
+                  child: HealthScanCategoriesWidget(),
+                ),
+                // Recent Insights Section
+                const SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    child: Text(
+                      "Your Recent Insights",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: HealthScanCategoriesWidget(),
+                  child: GridView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      childAspectRatio: 3 / 2,
+                    ),
+                    itemCount: 4,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.shade300,
+                              blurRadius: 6,
+                              offset: Offset(2, 2),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(Icons.file_present,
+                                color: Colors.blue, size: 40),
+                            Spacer(),
+                            Text(
+                              "Scan ${index + 1}",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            Text(
+                              "Status: Normal",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                // Health Tips Section
+                const SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 16.0),
+                    child: Text(
+                      "Health Tips for You",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: SizedBox(
+                    height: 140,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 5,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 200,
+                          margin: const EdgeInsets.only(right: 12),
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                AppColors.primaryColor,
+                                Colors.white,
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            "Tip ${index + 1}: Drink plenty of water daily for better health!",
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500),
+                            textAlign: TextAlign.center,
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+                // Daily Health Challenges Section
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    child: Text(
+                      "Daily Health Challenges",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.shade300,
+                          blurRadius: 6,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Challenge of the Day: Walk 10,000 steps",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                        SizedBox(height: 8),
+                        Row(
+                          children: [
+                            Icon(Icons.directions_walk,
+                                color: AppColors.primaryColor, size: 30),
+                            SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                "Stay active and healthy by completing this challenge!",
+                                style: TextStyle(color: Colors.grey.shade700),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Latest Medical News Section
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 16.0),
+                    child: Text(
+                      "Latest Medical News",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SliverToBoxAdapter(
+                  child: ListView.builder(
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.only(bottom: 12),
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.shade300,
+                              blurRadius: 6,
+                              offset: Offset(2, 2),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "News Title ${index + 1}",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              "Brief summary of the news goes here. Click to read more.",
+                              style: TextStyle(color: Colors.grey.shade700),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),

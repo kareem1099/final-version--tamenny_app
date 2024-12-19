@@ -5,17 +5,17 @@ import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
 import '../../../data/models/on_boarding_model.dart';
 
-class onBoardingPageViewBody extends StatefulWidget {
-  const onBoardingPageViewBody(
+class OnBoardingPageViewBody extends StatefulWidget {
+  const OnBoardingPageViewBody(
       {super.key, required this.controller, required this.onBoardingModel});
   final PageController controller;
   final OnBoardingModel onBoardingModel;
 
   @override
-  State<onBoardingPageViewBody> createState() => _onBoardingPageViewBodyState();
+  State<OnBoardingPageViewBody> createState() => _OnBoardingPageViewBodyState();
 }
 
-class _onBoardingPageViewBodyState extends State<onBoardingPageViewBody> {
+class _OnBoardingPageViewBodyState extends State<OnBoardingPageViewBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -56,19 +56,23 @@ class _onBoardingPageViewBodyState extends State<onBoardingPageViewBody> {
           count: 3,
           axisDirection: Axis.horizontal,
           effect: WormEffect(
-              dotColor: AppColors.primaryColor.withOpacity(0.25),
-              activeDotColor: AppColors.primaryColor),
+            dotColor: AppColors.primaryColor.withOpacity(0.25),
+            activeDotColor: AppColors.primaryColor,
+          ),
         ),
         const SizedBox(
           height: 24,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16.0,
+          ),
           child: Text(
             widget.onBoardingModel.textDesc,
             textAlign: TextAlign.center,
-            style: AppStyles.font30ExtraBold
-                .copyWith(color: AppColors.primaryColor),
+            style: AppStyles.font30ExtraBold.copyWith(
+              color: AppColors.primaryColor,
+            ),
           ),
         ),
       ],

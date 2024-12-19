@@ -54,7 +54,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => AuthCubit(),
-            child: const SignupView(),
+            child: const SignUpView(),
           ),
         );
       case Routes.forgotPasswordView:

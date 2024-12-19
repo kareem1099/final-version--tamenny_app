@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tamenny_app/features/onboarding/presentation/views/widgets/on_boarding_custom_button.dart';
-
-import '../../../../../core/theme/app_colors.dart';
-import '../../../../../core/theme/app_styles.dart';
 
 class BottonSection extends StatelessWidget {
   const BottonSection({
@@ -25,7 +21,7 @@ class BottonSection extends StatelessWidget {
             controller: controller,
             currentPage: currentPage,
           ),
-          SizedBox(
+          const SizedBox(
             height: 46,
           ),
         ],

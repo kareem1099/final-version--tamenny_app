@@ -13,8 +13,8 @@ import '../../view_model/cubit/auth_state.dart';
 import 'or_sign_in_with.dart';
 import 'social_media_methods.dart';
 
-class SignupFormSection extends StatelessWidget {
-  const SignupFormSection({super.key});
+class SignUpFormSection extends StatelessWidget {
+  const SignUpFormSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,7 @@ class SignupFormSection extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is SignUpSuccessState) {
+          
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content:

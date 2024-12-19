@@ -1,5 +1,3 @@
-import '../../../../core/utils/app_assets.dart';
-
 class OnBoardingModel {
   final String numberOfStep;
   final String image;

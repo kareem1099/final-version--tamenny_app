@@ -1,18 +1,18 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tamenny_app/core/routes/routes.dart';
 import 'package:tamenny_app/features/auth/presentation/view_model/cubit/auth_cubit.dart';
 import 'package:tamenny_app/features/auth/presentation/view_model/cubit/auth_state.dart';
+import 'package:tamenny_app/features/auth/presentation/views/widgets/remember_me_and_forgot_password.dart';
 
+import '../../../../../core/functions/show_toast_message.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
-import '../../../../../core/widgets/already_have_an_account.dart';
 import '../../../../../core/widgets/custom_app_button.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../../core/widgets/dont_have_an_account.dart';
+import '../functions/login_navigation_with_toast_message.dart';
 import 'or_sign_in_with.dart';
-import 'remember_me_widget.dart';
 import 'social_media_methods.dart';
 import 'terms_and_conditions.dart';
 
@@ -26,18 +26,19 @@ class LoginFormSection extends StatelessWidget {
       listener: (context, state) {
         if (state is LogInSuccessState) {
           FirebaseAuth.instance.currentUser!.emailVerified
-              ? Navigator.pushReplacementNamed(context, Routes.bottomNavBarView)
-              : ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Please Verify Your Account'),
-                  ),
+              ? loginWithMessage(
+                  context: context,
+                  msg: 'You have successfully logged in.',
+                  backgroundColor: Colors.green,
+                )
+              : showToastMessage(
+                  msg: 'Please Verify Your Account',
+                  backgroundColor: Colors.red,
                 );
-          ;
         } else if (state is LogInFailureState) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(state.errMessage),
-            ),
+          showToastMessage(
+            msg: state.errMessage,
+            backgroundColor: Colors.red,
           );
         }
       },
@@ -114,28 +115,13 @@ class LoginFormSection extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const RememberMeWidget(),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, Routes.forgotPasswordView);
-                      },
-                      child: Text(
-                        'Forgot Password?',
-                        style: AppStyles.font12Regular
-                            .copyWith(color: AppColors.primaryColor),
-                      ),
-                    ),
-                  ],
-                ),
+                const RememberMeWidgetAndForgotPassword(),
                 const SizedBox(
                   height: 32,
                 ),
                 state is LogInLoadingState
-                    ? Center(
-                        child: const CircularProgressIndicator(
+                    ? const Center(
+                        child:  CircularProgressIndicator(
                           color: AppColors.primaryColor,
                         ),
                       )
@@ -162,7 +148,7 @@ class LoginFormSection extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                DontHaveAnAccount(),
+                const DontHaveAnAccount(),
                 const SizedBox(
                   height: 24,
                 ),
@@ -174,3 +160,4 @@ class LoginFormSection extends StatelessWidget {
     );
   }
 }
+

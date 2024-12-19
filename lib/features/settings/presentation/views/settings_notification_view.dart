@@ -1,9 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tamenny_app/core/theme/app_colors.dart';
+import 'package:tamenny_app/core/widgets/custom_app_switch.dart';
 import 'package:tamenny_app/features/settings/presentation/views/widgets/settings_item.dart';
-
-import '../../../../core/utils/app_assets.dart';
 import '../../../../core/widgets/custom_app_bar.dart';
 
 class SettingsNotificationView extends StatelessWidget {
@@ -20,21 +19,25 @@ class SettingsNotificationView extends StatelessWidget {
             // leadingIcon: SvgPicture.asset(Assets.imagesNotificationIcon),
             title: 'Notification from Tamenny',
             onTap: () {},
+            trailingIcon: const CustomAppSwitch(),
           ),
           SettingsItem(
             // leadingIcon: SvgPicture.asset(Assets.imagesNotificationIcon),
             title: 'Sound',
             onTap: () {},
+            trailingIcon: const CustomAppSwitch(),
           ),
           SettingsItem(
             // leadingIcon: SvgPicture.asset(Assets.imagesNotificationIcon),
             title: 'Vibrate',
             onTap: () {},
+            trailingIcon: const CustomAppSwitch(),
           ),
           SettingsItem(
             // leadingIcon: SvgPicture.asset(Assets.imagesNotificationIcon),
             title: 'App Updates',
             onTap: () {},
+            trailingIcon: const CustomAppSwitch(),
           ),
         ]),
       ),

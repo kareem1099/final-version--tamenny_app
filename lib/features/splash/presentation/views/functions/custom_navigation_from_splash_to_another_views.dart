@@ -5,8 +5,8 @@ import '../../../../../core/databases/cache_helper.dart';
 import '../../../../../core/di/service_locator.dart';
 import '../../../../../core/routes/routes.dart';
 
-Future<Null> CustomNavigationFromSplashToAnotherViews(BuildContext context,
-    bool? isOnboardingVisited) {
+Future<Null> customNavigationFromSplashToAnotherViews(
+    BuildContext context, bool? isOnboardingVisited) {
   return Future.delayed(
     const Duration(milliseconds: 5000),
     () {
@@ -14,7 +14,8 @@ Future<Null> CustomNavigationFromSplashToAnotherViews(BuildContext context,
         FirebaseAuth.instance.currentUser == null
             ? Navigator.pushReplacementNamed(context, Routes.loginView)
             : FirebaseAuth.instance.currentUser!.emailVerified == true
-                ? Navigator.pushReplacementNamed(context, Routes.bottomNavBarView)
+                ? Navigator.pushReplacementNamed(
+                    context, Routes.bottomNavBarView)
                 : Navigator.pushReplacementNamed(context, Routes.loginView);
       } else {
         getIt<CacheHelper>().saveData(key: 'isOnboardingVisited', value: true);

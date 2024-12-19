@@ -31,7 +31,7 @@ class GetStartedButton extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const  SizedBox(
                     width: 12,
                   ),
                   SvgPicture.asset(

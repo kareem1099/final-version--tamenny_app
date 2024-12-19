@@ -21,16 +21,18 @@ class _RememberMeWidgetState extends State<RememberMeWidget> {
           activeColor: AppColors.primaryColor,
           value: isChecked,
           onChanged: (value) {
-            isChecked = value!;
-            setState(() {});
+            setState(() {
+              isChecked = value!;
+            });
           },
         ),
         Text(
           'Remember me',
           style: AppStyles.font12Regular.copyWith(
-              color: Color(
-            0xff9E9E9E,
-          )),
+            color: const Color(
+              0xff9E9E9E,
+            ),
+          ),
         ),
       ],
     );

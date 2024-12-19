@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tamenny_app/core/functions/show_toast_message.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_styles.dart';
@@ -33,7 +34,7 @@ class ForgotPasswordFormSection extends StatelessWidget {
           Text(
             'At our app, we take the security of your information seriously.',
             style: AppStyles.font14Regular.copyWith(
-              color: Color(0xff757575),
+              color: const Color(0xff757575),
               letterSpacing: 1,
             ),
           ),
@@ -52,21 +53,20 @@ class ForgotPasswordFormSection extends StatelessWidget {
               authCubit.email = data;
             },
           ),
-          Expanded(
-            child: const SizedBox(),
+          const Expanded(
+            child: SizedBox(),
           ),
           CustomAppButton(
             text: 'Reset Password',
             onTap: () {
               authCubit.resetPassword();
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text('Check Mail'),
-                ),
+              showToastMessage(
+                msg: 'Check your email for the reset link.',
+                backgroundColor: Colors.blue,
               );
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 26,
           ),
         ],

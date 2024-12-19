@@ -23,7 +23,7 @@ class CustomOnboardingButton extends StatelessWidget {
           Navigator.pushReplacementNamed(context, Routes.signupView);
         } else {
           controller.nextPage(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               curve: Curves.fastOutSlowIn);
         }
       },

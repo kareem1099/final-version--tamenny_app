@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tamenny_app/core/routes/routes.dart';
 import 'package:tamenny_app/core/theme/app_colors.dart';
 import 'package:tamenny_app/core/theme/app_styles.dart';
 import 'package:tamenny_app/core/utils/app_assets.dart';

@@ -4,8 +4,8 @@ import '../../../../core/theme/app_colors.dart';
 import 'widgets/custom_clip_path_with_logo.dart';
 import 'widgets/signup_form_section.dart';
 
-class SignupView extends StatelessWidget {
-  const SignupView({super.key});
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class SignupView extends StatelessWidget {
         body: ListView(
           children: const [
             CustomClipPathWithLogo(),
-            SignupFormSection(),
+            SignUpFormSection(),
           ],
         ),
       ),

@@ -31,7 +31,7 @@ class _OnboardingViewState extends State<OnboardingView> {
     ),
   ];
 
-  int current_page_index = 0;
+  int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -39,16 +39,16 @@ class _OnboardingViewState extends State<OnboardingView> {
         body: Stack(
           children: [
             PageView.builder(
+              controller: controller,
               onPageChanged: (index) {
                 setState(
                   () {
-                    current_page_index = index;
+                    currentPageIndex = index;
                   },
                 );
               },
-              controller: controller,
               itemBuilder: (context, index) {
-                return onBoardingPageViewBody(
+                return OnBoardingPageViewBody(
                   controller: controller,
                   onBoardingModel: onBoardingModels[index],
                 );
@@ -57,7 +57,7 @@ class _OnboardingViewState extends State<OnboardingView> {
             ),
             BottonSection(
               controller: controller,
-              currentPage: current_page_index,
+              currentPage: currentPageIndex,
             ),
           ],
         ),
@@ -65,4 +65,3 @@ class _OnboardingViewState extends State<OnboardingView> {
     );
   }
 }
-
