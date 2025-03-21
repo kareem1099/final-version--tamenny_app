@@ -11,30 +11,42 @@ class ScanView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String disese;
+    final String moduleRoute = ModalRoute.of(context)!.settings.arguments! as String;
+    if(moduleRoute =="Knee"){
+      disese="Knee Osteoarthritis Analysis";
+    }else if(moduleRoute =="Lung"){
+      disese="Lung Cancer Analysis";
+    }else if(moduleRoute =="Heart"){
+      disese="Heart scan";
+    }else{
+      disese="Brain Cancer Analysis";
+    }
+
     return Scaffold(
-      appBar: customAppBar(context, title: 'Lung Disease Analysis'),
+      appBar: customAppBar(context, title: disese),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
             Image.asset(Assets.imagesDoctorWelcomeModel),
-            const Text(
-              'Lung Disease Analysis',
+             Text(
+              disese,
               style: AppStyles.font30SemiBold,
             ),
             const SizedBox(
               height: 8,
             ),
             const Text(
-              'Upload your chest scan and let Tamenny assist with a trusted analysis.',
+              'Upload your scan and let Tamenny assist with a trusted analysis.',
               style: AppStyles.font16Regular,
             ),
             const SizedBox(
               height: 16,
             ),
             const Text(
-              'Get started by uploading a clear image of your chest X-ray or CT scan.',
+              'Get started by uploading a clear image of your X-ray or CT scan.',
               style: AppStyles.font20SemiBold,
             ),
             const SizedBox(
@@ -71,7 +83,7 @@ class ScanView extends StatelessWidget {
             CustomAppButton(
               text: 'Proceed to Upload',
               onTap: () {
-                Navigator.pushNamed(context, Routes.uploadFileView);
+                Navigator.pushNamed(context, Routes.uploadFileView,arguments:moduleRoute);
               },
             ),
             const SizedBox(

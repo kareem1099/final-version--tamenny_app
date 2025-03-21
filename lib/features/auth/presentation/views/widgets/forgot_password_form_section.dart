@@ -33,7 +33,7 @@ class ForgotPasswordFormSection extends StatelessWidget {
           Text(
             'At our app, we take the security of your information seriously.',
             style: AppStyles.font14Regular.copyWith(
-              color: Color(0xff757575),
+              color: const Color(0xff757575),
               letterSpacing: 1,
             ),
           ),
@@ -52,8 +52,8 @@ class ForgotPasswordFormSection extends StatelessWidget {
               authCubit.email = data;
             },
           ),
-          Expanded(
-            child: const SizedBox(),
+          const Expanded(
+            child: SizedBox(),
           ),
           CustomAppButton(
             text: 'Reset Password',
@@ -66,7 +66,7 @@ class ForgotPasswordFormSection extends StatelessWidget {
               );
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 26,
           ),
         ],

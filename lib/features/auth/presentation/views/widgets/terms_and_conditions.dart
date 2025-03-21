@@ -14,7 +14,7 @@ class TermsAndConditionsAndPrivacyPolicy extends StatelessWidget {
           TextSpan(
             text: 'By Logging , you agree to our ',
             style: AppStyles.font12Regular.copyWith(
-              color: Color(0xff9E9E9E),
+              color: const Color(0xff9E9E9E),
             ),
           ),
           TextSpan(
@@ -26,7 +26,7 @@ class TermsAndConditionsAndPrivacyPolicy extends StatelessWidget {
           TextSpan(
             text: 'and ',
             style: AppStyles.font12Regular.copyWith(
-              color: Color(0xff9E9E9E),
+              color: const Color(0xff9E9E9E),
             ),
           ),
           TextSpan(

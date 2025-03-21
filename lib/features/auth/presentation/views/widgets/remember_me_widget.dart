@@ -28,7 +28,7 @@ class _RememberMeWidgetState extends State<RememberMeWidget> {
         Text(
           'Remember me',
           style: AppStyles.font12Regular.copyWith(
-              color: Color(
+              color: const Color(
             0xff9E9E9E,
           )),
         ),

@@ -18,6 +18,7 @@ import 'terms_and_conditions.dart';
 class LoginFormSection extends StatelessWidget {
   const LoginFormSection({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     var authCubit = BlocProvider.of<AuthCubit>(context);
@@ -31,7 +32,6 @@ class LoginFormSection extends StatelessWidget {
                     content: Text('Please Verify Your Account'),
                   ),
                 );
-          ;
         } else if (state is LogInFailureState) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -81,6 +81,7 @@ class LoginFormSection extends StatelessWidget {
                 ),
                 CustomTextFormField(
                   hintText: 'Password',
+                  
                   onChanged: (data) {
                     authCubit.password = data;
                   },
@@ -122,8 +123,8 @@ class LoginFormSection extends StatelessWidget {
                   height: 32,
                 ),
                 state is LogInLoadingState
-                    ? Center(
-                        child: const CircularProgressIndicator(
+                    ? const Center(
+                        child: CircularProgressIndicator(
                           color: AppColors.primaryColor,
                         ),
                       )
@@ -150,7 +151,7 @@ class LoginFormSection extends StatelessWidget {
                 const SizedBox(
                   height: 24,
                 ),
-                AlreadyHaveAnAccount(),
+                const AlreadyHaveAnAccount(),
                 const SizedBox(
                   height: 24,
                 ),

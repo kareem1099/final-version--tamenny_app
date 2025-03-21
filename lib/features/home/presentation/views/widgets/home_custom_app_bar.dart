@@ -12,8 +12,8 @@ class HomeCustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 12),
           child: CircleAvatar(
             radius: 20,
             backgroundImage: AssetImage(
@@ -21,7 +21,7 @@ class HomeCustomAppBar extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 13,
         ),
         Expanded(
@@ -33,14 +33,14 @@ class HomeCustomAppBar extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Hi, Muaz!',
+                    const Text(
+                      'Hi, Kareem!',
                       style: AppStyles.font18Bold,
                     ),
                     Text(
                       'How are you Today?',
                       style: AppStyles.font11Regular.copyWith(
-                        color: Color(0xff616161),
+                        color: const Color(0xff616161),
                       ),
                     ),
                   ],
@@ -52,7 +52,7 @@ class HomeCustomAppBar extends StatelessWidget {
                   },
                   child: CircleAvatar(
                       radius: 24,
-                      backgroundColor: Color(0xffF5F5F5),
+                      backgroundColor: const Color(0xffF5F5F5),
                       child:
                           SvgPicture.asset(Assets.imagesNotificationFoundIcon)),
                 ),

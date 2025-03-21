@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:tamenny_app/core/routes/routes.dart';
 import 'package:tamenny_app/core/theme/app_colors.dart';
 import 'package:tamenny_app/core/theme/app_styles.dart';
-import 'package:tamenny_app/core/utils/app_assets.dart';
 import 'package:tamenny_app/features/onboarding/data/models/on_boarding_model.dart';
 
 import 'widgets/on_boarding_button_section.dart';

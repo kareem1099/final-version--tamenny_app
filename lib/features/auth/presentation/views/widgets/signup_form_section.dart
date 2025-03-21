@@ -131,8 +131,8 @@ class SignupFormSection extends StatelessWidget {
                   height: 16,
                 ),
                 state is SignUpLoadingState
-                    ? Center(
-                        child: const CircularProgressIndicator(
+                    ? const Center(
+                        child: CircularProgressIndicator(
                           color: AppColors.primaryColor,
                         ),
                       )

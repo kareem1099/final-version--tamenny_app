@@ -5,6 +5,8 @@ import 'package:tamenny_app/features/auth/presentation/view_model/cubit/auth_cub
 import 'package:tamenny_app/features/home/presentation/views/widgets/home_bottom_nav_bar.dart';
 import 'package:tamenny_app/features/onboarding/presentation/views/onboarding_view.dart';
 import 'package:tamenny_app/features/onboarding/presentation/views/welcome_view.dart';
+import '../../features/chatbot/presentation/views/chat_bot_view.dart';
+import '../../features/profiel/presentation/views/personal_info_view.dart';
 
 import '../../features/auth/presentation/views/forgot_password_view.dart';
 import '../../features/auth/presentation/views/login_view.dart';
@@ -35,7 +37,8 @@ class AppRouter {
         );
       case Routes.scanView:
         return MaterialPageRoute(
-          builder: (context) => const ScanView(),
+          settings: settings,
+          builder: (context) => ScanView(),
         );
       case Routes.loginView:
         return MaterialPageRoute(
@@ -68,11 +71,12 @@ class AppRouter {
         );
       case Routes.uploadFileView:
         return MaterialPageRoute(
-          builder: (context) => const UploadFileView(),
+          settings: settings,
+          builder: (context) =>  UploadFileView(),
         );
       case Routes.healthScanCategoriesView:
         return MaterialPageRoute(
-          builder: (context) => const HealthScanCategoriesView(),
+          builder: (context) => HealthScanCategoriesView(),
         );
       case Routes.notificationView:
         return MaterialPageRoute(
@@ -80,11 +84,22 @@ class AppRouter {
         );
       case Routes.completedScreen:
         return MaterialPageRoute(
-          builder: (context) => const CompletedScreen(),
+          settings: settings,
+          builder: (context) =>  CompletedScreen(),
         );
       case Routes.scanAnalysisResultsScreen:
         return MaterialPageRoute(
-          builder: (context) => const ScanAnalysisResults(),
+          settings: settings,
+          builder: (context) => ScanAnalysisResults(),
+        ); case Routes.personalInfoView:
+      return MaterialPageRoute(
+        settings: settings,
+        builder: (context) => const PersonalInfoView(),
+      );
+      case Routes.chatBotView:
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (context) => const ChatBotView(),
         );
       default:
         return MaterialPageRoute(

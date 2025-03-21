@@ -9,7 +9,7 @@ class OrSignInWith extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: Divider(
             color: Color(0xffE0E0E0),
             thickness: 1,
@@ -19,10 +19,10 @@ class OrSignInWith extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Text(
             'Or sign in with',
-            style: AppStyles.font12Regular.copyWith(color: Color(0xff9E9E9E)),
+            style: AppStyles.font12Regular.copyWith(color: const Color(0xff9E9E9E)),
           ),
         ),
-        Expanded(
+        const Expanded(
           child: Divider(
             color: Color(0xffE0E0E0),
             thickness: 1,

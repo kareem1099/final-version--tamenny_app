@@ -14,7 +14,7 @@ class HealthScanCategoriesHeaderWidget extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
+        const Text(
           'Health Scan Categories',
           style: AppStyles.font18SemiBold,
         ),

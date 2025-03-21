@@ -25,7 +25,7 @@ class BottonSection extends StatelessWidget {
             controller: controller,
             currentPage: currentPage,
           ),
-          SizedBox(
+          const SizedBox(
             height: 46,
           ),
         ],

@@ -5,7 +5,9 @@ import '../../../../../core/theme/app_styles.dart';
 import '../../../../../core/utils/app_assets.dart';
 
 class Post extends StatelessWidget {
-  const Post({super.key});
+  String? name;
+  String? username;
+  Post({super.key, required this.name,required this.username});
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +29,8 @@ class Post extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  const Text(
-                    'Muaz Osama',
+                   Text(
+                    name!,
                     style: AppStyles.font13Bold,
                   ),
                   const SizedBox(
@@ -39,7 +41,7 @@ class Post extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '@muazosama',
+                          '@${username}',
                           style: AppStyles.font10Bold
                               .copyWith(color: Colors.black.withOpacity(0.5)),
                         ),

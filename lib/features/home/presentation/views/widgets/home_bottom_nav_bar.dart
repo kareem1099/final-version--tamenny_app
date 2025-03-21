@@ -6,7 +6,6 @@ import 'package:tamenny_app/features/home/presentation/views/home_view.dart';
 import 'package:tamenny_app/features/profiel/presentation/views/profile_view.dart';
 import 'package:tamenny_app/features/search/presentation/views/search_view.dart';
 import 'package:tamenny_app/features/settings/presentation/views/settings_view.dart';
-import 'package:tamenny_app/scan/presentation/views/scan_view.dart';
 import '../../../../community/presentation/views/community_view.dart';
 
 PersistentTabController _controller = PersistentTabController();
@@ -30,7 +29,7 @@ class BottomNavBar extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       const HomeView(),
-      const CommunityView(),
+      CommunityView(),
       const SearchView(),
       const SettingsView(),
       const ProfileView(),
