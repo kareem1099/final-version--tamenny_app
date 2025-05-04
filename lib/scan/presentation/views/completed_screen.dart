@@ -55,7 +55,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
       // Create a multipart request
       var request = http.MultipartRequest(
         'POST',
-        Uri.parse('https://3157-197-38-175-23.ngrok-free.app/predict_${moduleRoute.key}'), // Replace with your server IP
+        Uri.parse('https://dd5a-197-38-202-161.ngrok-free.app/predict_${moduleRoute.key}'), // Replace with your server IP
       );
 
       // Attach the image file
